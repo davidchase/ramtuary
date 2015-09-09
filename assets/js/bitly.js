@@ -5,8 +5,8 @@ $(document).ready(function() {
   $('#mkurl').bind('click', function(e) {
     $.getJSON("https://api-ssl.bitly.com/v3/shorten?", { 
         format: "json",
-        access_token: "b3939439e77a7e13c8b0799c0eec70a276deee99",
-        longUrl: "http://127.0.0.1:1025/" + location.search + location.hash
+        access_token: "1cb9ba5d3ab7a6c0769617fb796f0be4bdd65b53",
+        longUrl: "http://davidchase.github.io/ramtuary/" + location.search + location.hash
       },
       function(response) {
         $out.val(response.data.url);
