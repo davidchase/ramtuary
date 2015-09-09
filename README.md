@@ -5,6 +5,8 @@ This is basically a clone of the [ramda repl](https://github.com/ramda/ramda.git
 
 With some additions of [ramda fantasy](https://github.com/ramda/ramda-fantasy) and [sanctuary](https://github.com/plaid/sanctuary) for moar fun.
 
+[Try it out](http://davidchase.github.io/ramtuary/)
+
 ## usage
 
 The following variables are available globally:
