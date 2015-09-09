@@ -128,23 +128,28 @@ propEx({w: 'WWW', x: 'XXX', z: 'ZZZ'});
         ],
         fantasy: [
             {
-                title: 'Maybe',
+                title: 'Futures',
                 body: function(){
                     /*
-var queryCSS = R.bind(document.querySelector, document);
-// sanctuary Maybe
-var maybeQuery = R.compose(S.toMaybe, queryCSS);
-// ramda-fantasy Maybe
-var maybeQueryR = R.compose(Maybe, queryCSS);
+var log = console.log.bind(console);
+var error = console.error.bind(console);
 
-var setStyle = R.curry(function(key, value, element){
-    element.style[key] = value;
-    return element;
-});
-// if '.panel-heading' selector exists change background to green
-maybeQuery('.panel-heading').map(setStyle('background', 'green'));
+var url = 'http://reqr.es/api/users?page=3';
 
-maybeQueryR('.panel-heading').map(setStyle('color', 'black'));
+var fetch = function(url) {
+    return new Future(function(rej, res){
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", res, false);
+        oReq.addEventListener("error", rej, false);
+        oReq.addEventListener("abort", rej, false);
+        oReq.open("get", url, true);
+        oReq.send();
+    });
+};
+
+var f = R.compose(R.map(S.parseJson), R.map(R.path(['target','response'])), fetch)(url);
+
+f.fork(error, R.map(log)); //=> Object {page: "3", per_page: 3, total: 12, total_pages: 4, data: Array[3]}
                      */
                 }
             }
