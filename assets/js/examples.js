@@ -136,7 +136,7 @@ var error = console.error.bind(console);
 
 var url = 'http://reqr.es/api/users?page=3';
 
-var fetch = function(url) {
+var xhr = function(url) {
     return new Future(function(rej, res){
         var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", res, false);
@@ -147,7 +147,7 @@ var fetch = function(url) {
     });
 };
 
-var f = R.compose(R.map(S.parseJson), R.map(R.path(['target','response'])), fetch)(url);
+var f = R.compose(R.map(S.parseJson), R.map(R.path(['target','response'])), xhr)(url);
 
 f.fork(error, R.map(log)); //=> Object {page: "3", per_page: 3, total: 12, total_pages: 4, data: Array[3]}
                      */
