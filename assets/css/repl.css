@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Droid+Sans);
+
+html, body {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.output-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+html.hide-output .output-wrapper {
+    display: none;
+}
+
+html.hide-output .CodeMirror {
+}
+
+.eval, .source-map {
+    background-color: white;
+    border: none;
+}
+.error {
+    color: red;
+    background-color: white;
+    border: none;
+}
+
+.dropdown-menu {
+    width: 250px;
+}
+
+#options_menu input {
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 0;
+}
+
+#options_menu label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+#options_menu hr {
+    border-color: darkgrey;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+body.dark, body.dark h1 {
+    background-color: #000000;
+    color: #ffffff;
+}
+.urltext {
+    border: none;
+    font-size: 15px;
+    vertical-align: middle;
+    margin-left: 6px;
+}
