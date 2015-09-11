@@ -16,3 +16,7 @@ The following variables are available globally:
 `S` for Sanctuary
 
 `Either, Future, Identity, IO, Maybe, Reader, Tuple`  for Ramda Fantasy
+
+## todo
+- [ ] add `console.log` capturing for output
+- [ ] update to latest [codemirror](https://github.com/codemirror/CodeMirror) for moar features
