@@ -18,5 +18,6 @@ The following variables are available globally:
 `Either, Future, Identity, IO, Maybe, Reader, Tuple`  for Ramda Fantasy
 
 ## todo
+- [ ] switch to babel for compiling
 - [ ] add `console.log` capturing for output
 - [ ] update to latest [codemirror](https://github.com/codemirror/CodeMirror) for moar features
