@@ -1,0 +1,61 @@
+.top-nav {
+    background: #6F377D;
+    height:15px;
+}
+
+.col-md-6:last-of-type {
+    border-left: 1px solid #999;
+    min-height: 30em;
+}
+
+.page-header {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+
+.row {
+    background: #282a36;
+}
+
+.panel-primary {
+    border-color:#282a36;
+    box-shadow: none;
+}
+.panel-primary > .panel-heading,
+.panel-default>.panel-heading {
+    background-color: #282a36;
+    border-color: #282a36;
+    background-image: none;
+    color:#fff;
+}
+
+.panel {
+    background-color: #282a36;
+}
+
+
+
+.eval, .source-map, .console-log {
+    background-color: #282a36;
+    color: #fff;
+    border:none;
+}
+
+.console-log {
+    color:#888;
+}
+
+
+.error {
+    background: #282a36;
+}
+
+button.btn.btn-danger {
+    background-color: #bf0000;
+    background-image: none;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+    background-color: #282a36;
+    background-image: none;
+}

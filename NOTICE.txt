@@ -1,6 +1,0 @@
-REPL
-Copyright 2011 Traceur Authors
-
-This software contains code derived from the traceur-compiler
-demo repl.  The original software is available from
-  https://github.com/google/traceur-compiler
