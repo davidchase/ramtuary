@@ -36,3 +36,4 @@ Examples located in this [folder](examples)
 - [x] support auto-completion
 - [x] match brackets
 - [ ] remove jquery dependency
+- [ ] refactor/code cleanup (could always use a bit of that)
