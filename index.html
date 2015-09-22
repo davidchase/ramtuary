@@ -100,7 +100,6 @@
 
 <div class="page-header">
     <h1>Ramtuary REPL 
-      <button class="btn btn-primary clear-console" type="button">Clear Console</button>
       <button class="btn btn-danger" type="reset">Reset</button>
       <button id="mkurl" class="btn">Make Short URL:</button><input id="urlout" type="text" class="urltext" />
     </h1>
@@ -120,7 +119,8 @@
     <div class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Output</h3>
+                <h3 class="panel-title output">Output</h3>
+                <button class="btn btn-link btn-xs clear-console" type="button">Clear Output</button>
             </div>
             <div class="panel-body">
                 <pre class="error"></pre>
