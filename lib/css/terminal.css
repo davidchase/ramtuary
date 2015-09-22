@@ -1,3 +1,9 @@
+.output, .clear-console {
+    float:left;
+}
+.clear-console  {
+    margin-left: 12px;
+}
 .top-nav {
     background: #6F377D;
     height:15px;
