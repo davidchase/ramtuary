@@ -23,6 +23,7 @@
     "url": "git+https://github.com/davidchase/ramtuary.git"
   },
   "scripts": {
-    "build-examples": "babel-node create-examples.js && browserify -r ./lib/js/examples.js -t babelify ./lib/js/repl.js > ./lib/js/bundle.js"
+    "build": "browserify -t babelify ./lib/js/repl.js > ./lib/js/bundle.js",
+    "build-examples": "babel-node create-examples.js && browserify -t babelify ./lib/js/repl.js > ./lib/js/bundle.js"
   }
 }
