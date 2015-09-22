@@ -13,9 +13,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -23,24 +20,24 @@
     <![endif]-->
 
     <!-- CodeMirror files -->
-    <link rel=stylesheet href="vendor/codemirror2/lib/codemirror.css">
-    <script src="vendor/codemirror2/lib/codemirror.js"></script>
-    <script src="vendor/codemirror2/mode/javascript/javascript.js"></script>
-    <!--<script src="vendor/codemirror2/addon/edit/matchbrackets.js"></script>-->
-    <link href="vendor/codemirror2/theme/dracula.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/addon/hint/show-hint.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/mode/javascript/javascript.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/theme/dracula.min.css" rel="stylesheet">
 
-    <!-- load libraries -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.17.1/ramda.js"></script>
-    <script src="//cdn.rawgit.com/plaid/sanctuary/master/index.js"></script>
+    <script src="//wzrd.in/standalone/sanctuary@latest"></script>
     <script src="//wzrd.in/standalone/ramda-fantasy@latest"></script>
 
 
-    <!-- traceur-compiler pre-loaded -->
-    <script src="assets/js/traceur.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
 
-    <!-- repl css -->
-    <link rel="stylesheet" href="assets/css/repl.css">
-    <link rel="stylesheet" href="assets/css/terminal.css">
+    <link rel="stylesheet" href="lib/css/repl.css">
+    <link rel="stylesheet" href="lib/css/terminal.css">
 
 
 </head>
@@ -49,7 +46,8 @@
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+    <nav class="top-nav"></nav>
+    <div class="container col-lg-12">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -64,19 +62,8 @@
                 <li><a data-toggle="modal" data-target="#about-modal">About</a></li>
                 <li class="dropdown" id="examples_menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
-                    <ul id="examples" class="dropdown-menu">
-                        <li id="arrays" class="dropdown-header">List Functions</li>
-                        <li id="functions" class="dropdown-header">Function Functions</li>
-                        <li id="objects" class="dropdown-header">Object Functions</li>
-                        <li id="fantasy" class="dropdown-header">Fantasy Functions</li>
-                    </ul>
+                    <ul id="examples" class="dropdown-menu"></ul>
                 </li>
-                <li class="dropdown" id="options_menu">
-                    <a href="#" class="dropdown-toggle option-button" data-toggle="dropdown">Options <b class="caret"></b></a>
-                    <ul class="dropdown-menu traceur-options">
-                    </ul>
-                </li>
-                <!-- <li><a href="https://github.com/ramda/ramda"><img width="24px" src="assets/img/github.png" /> Source</a></li> -->
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -91,17 +78,14 @@
             </div>
             <div class="modal-body">
                 <p>
-                This REPL was built by <a href="http://autosponge.github.io">Paul Grenier</a> using <a href="https://github.com/google/traceur-compiler">traceur-compiler</a>,
-                    and <a href="http://codemirror.net/2/">CodeMirror2</a> so you can use ES6 features now!
-                    Control the available ES6 options from the "Options" menu.
-                    By default, the really cool, stable stuff is already enabled--you're welcome.
+                Inspired by <a href="https://github.com/ramda/ramda.github.io/tree/master/repl">Ramda repl</a> 
+                this repl uses <a href="https://babeljs.io/">Babel</a>, and the lastest <a href="http://codemirror.net/">CodeMirror</a> for es6 and even es7 fun with ramda, ramda-fantasy and sanctuary.
                 </p>
                 <p>
-                    The "Examples" menu contains sample code I made to either get you started with your own
-                    experiments or let you bask in the glory of my creation.
+                    The "Examples" menu contains sample code you can play around with from the <a href="http://ramdajs.com/docs/">ramda docs</a>
                 </p>
                 <p>
-                    The "Reset" button (because there should always be a big, red button) clears the repl and repl
+                    The "Reset" button clears the repl and repl
                     history.
                 </p>
             </div>
@@ -112,7 +96,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class="container theme-showcase">
+<div class="container col-lg-12 theme-showcase">
 
 <div class="page-header">
     <h1>Ramtuary REPL 
@@ -122,26 +106,28 @@
     <a href="http://ramdajs.com/0.17/index.html" target="_blank">Ramda</a> + <a href="https://github.com/ramda/ramda-fantasy" target="_blank">Ramda Fantasy</a> + <a href="https://github.com/plaid/sanctuary" target="_blank">Sanctuary</a>
 </div>
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Input</h3>
             </div>
             <div class="panel-body">
-                <textarea class="input"></textarea>
+                <textarea class="input" rows="20" cols="50"></textarea>
             </div>
         </div>
-        <div class="panel panel-default">
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Output</h3>
             </div>
             <div class="panel-body">
                 <pre class="error"></pre>
+                <pre class="console-log"></pre>
                 <pre class="eval"></pre>
-                <pre class="source-map"></pre>
             </div>
         </div>
-    </div><!-- /.col-sm-4 -->
+    </div>
 </div>
 
 <!--<button class="option-button">Options</button>-->
@@ -156,10 +142,8 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-<script src="assets/js/repl.js"></script>
-<!-- load examples -->
-<script src="assets/js/examples.js"></script>
-<script src="assets/js/bitly.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="lib/js/bundle.js"></script>
+<script src="lib/js/bitly.js"></script>
+<script src="lib/js/main.js"></script>
 </body>
 </html>
