@@ -11,6 +11,8 @@
     "debounce": "1.0.0",
     "query-string": "2.4.1",
     "ramda": "0.17.1",
+    "ramda-fantasy": "0.4.0",
+    "sanctuary": "0.7.0",
     "through2": "2.0.0",
     "vinyl-fs": "1.0.0"
   },
@@ -24,6 +26,6 @@
   },
   "scripts": {
     "build": "browserify -t babelify ./lib/js/repl.js > ./lib/js/bundle.js",
-    "build-examples": "babel-node create-examples.js && browserify -t babelify ./lib/js/repl.js > ./lib/js/bundle.js"
+    "build-examples": "babel-node create-examples.js && npm run build"
   }
 }
