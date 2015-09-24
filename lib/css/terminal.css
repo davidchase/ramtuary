@@ -1,3 +1,11 @@
+.CodeMirror {
+    height: 500px;
+}
+
+.CodeMirror-hscrollbar {
+    display: none !important;
+}
+
 .right .github-fork-ribbon {
     background-color: #29357F;
 }
@@ -16,7 +24,7 @@
 
 .col-md-6:last-of-type {
     border-left: 1px solid #999;
-    min-height: 30em;
+    min-height: 42em;
 }
 
 .page-header {
