@@ -3,11 +3,22 @@
   "description": "Ramda + Ramda Fantasy + Sanctuary REPL",
   "version": "1.0.0",
   "author": "David Chase",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/davidchase/ramtuary/issues"
   },
   "dependencies": {
-    "babelify": "6.3.0",
+    "babel-core": "6.0.12",
+    "babel-plugin-undeclared-variables-check": "6.0.2",
+    "babel-polyfill": "6.0.2",
+    "babel-preset-es2015": "6.0.12",
+    "babel-preset-stage-0": "6.0.14",
+    "babelify": "7.0.2",
     "debounce": "1.0.0",
     "query-string": "2.4.1",
     "ramda": "0.17.1",
@@ -16,7 +27,6 @@
     "through2": "2.0.0",
     "vinyl-fs": "1.0.0"
   },
-  "devDependencies": {},
   "homepage": "https://github.com/davidchase/ramtuary#readme",
   "license": "MIT",
   "private": true,
