@@ -5,7 +5,7 @@ Ramda + Ramda Fantasy + Sanctuary REPL
 
 ~~With some additions of [ramda fantasy](https://github.com/ramda/ramda-fantasy) and [sanctuary](https://github.com/plaid/sanctuary) for moar fun.~~
 
-Inspired by [ramda repl](https://github.com/ramda/ramda.github.io/tree/master/repl).
+Ramtuary is now the ramda [repl](ramdajs.com/repl/).
 
 Inlcudes [ramda](https://github.com/ramda/ramda), [ramda fantasy](https://github.com/ramda/ramda-fantasy) and [sanctuary](https://github.com/plaid/sanctuary)
 
