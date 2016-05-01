@@ -76,7 +76,7 @@
             </div>
             <div class="modal-body">
                 <p>
-                Inspired by <a href="https://github.com/ramda/ramda.github.io/tree/master/repl">Ramda repl</a> 
+                Inspired by <a href="https://github.com/ramda/ramda.github.io/tree/master/repl">Ramda repl</a>
                 this repl uses <a href="https://babeljs.io/">Babel</a>, and the lastest <a href="http://codemirror.net/">CodeMirror</a> for es6 and even es7 fun with ramda, ramda-fantasy and sanctuary.
                 </p>
                 <p>
@@ -97,14 +97,26 @@
 <div class="container col-lg-12 theme-showcase">
 
 <div class="page-header">
-    <h1>Ramtuary REPL 
+    <h1>Ramtuary REPL
       <button class="btn btn-danger" type="reset">Reset</button>
       <button id="mkurl" class="btn btn-primary">Make Short URL:</button><input id="urlout" type="text" class="urltext" />
     </h1>
     <a href="http://ramdajs.com/" target="_blank">Ramda</a> + <a href="https://github.com/ramda/ramda-fantasy" target="_blank">Ramda Fantasy</a> + <a href="https://github.com/plaid/sanctuary" target="_blank">Sanctuary</a>
+    <br><br>
+    <div id="display-options" class="btn-group" data-toggle="buttons">
+      <label id="display-input" class="btn btn-primary">
+        <input type="radio" name="options" autocomplete="off"> Input
+      </label>
+      <label id="display-output" class="btn btn-primary">
+        <input type="radio" name="options" autocomplete="off"> Output
+      </label>
+      <label id="display-both" class="btn btn-primary active">
+        <input type="radio" name="options" autocomplete="off"> Both
+      </label>
+    </div>
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div id="input-panel" class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Input</h3>
@@ -114,7 +126,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div id="output-panel" class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title output">Output</h3>
@@ -131,6 +143,38 @@
 
 </div> <!-- /container -->
 
+<script>
+    var $input_panel = document.getElementById('input-panel')
+    var $output_panel = document.getElementById('output-panel')
+    var $display_options = document.getElementById('display-options')
+
+    $display_options.addEventListener('click', function(e) {
+        switch (e.target.id) {
+            case 'display-input':
+                $output_panel.style.display = 'none'
+                $input_panel.classList.remove('col-md-6')
+                $input_panel.classList.add('col-md-12')
+                $input_panel.style.display = 'inherit'
+                break
+            case 'display-output':
+                $input_panel.style.display = 'none'
+                $output_panel.classList.remove('col-md-6')
+                $output_panel.classList.add('col-md-12')
+                $output_panel.style.display = 'inherit'
+                break
+            case 'display-both':
+                $input_panel.classList.remove('col-md-12')
+                $output_panel.classList.remove('col-md-12')
+
+                $input_panel.classList.add('col-md-6')
+                $output_panel.classList.add('col-md-6')
+
+                $input_panel.style.display = 'inherit'
+                $output_panel.style.display = 'inherit'
+                break
+        }
+    })
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/codemirror.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/addon/edit/closebrackets.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/addon/hint/show-hint.min.js"></script>
