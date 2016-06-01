@@ -1,7 +1,7 @@
-import fs from 'fs';
-import R from 'ramda';
-import vfs from 'vinyl-fs';
-import through2 from 'through2';
+const fs = require('fs');
+const R = require('ramda');
+const vfs = require('vinyl-fs');
+const through2 = require('through2');
 
 const src = './examples/**/*.js';
 const dest = './examples/example.json';
