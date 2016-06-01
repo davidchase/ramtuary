@@ -1,7 +1,7 @@
-const log = console::console.log;
-const error = console::console.error;
+const log = console.log.bind(console);
+const error = console.error.bind(console);
 
-const url = 'http://reqr.es/api/users?page=3';
+const url = 'http://reqres.in/api/users?page=3';
 
 const xhr = function(url) {
     return new Future(function(rej, res) {

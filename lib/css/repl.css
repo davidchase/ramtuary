@@ -2,8 +2,8 @@
 
 html, body {
     margin: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 0;
+    height: calc(100vh - 190px);
 }
 
 .output-wrapper {
@@ -16,8 +16,6 @@ html.hide-output .output-wrapper {
     display: none;
 }
 
-html.hide-output .CodeMirror {
-}
 
 .eval, .source-map {
     background-color: white;
@@ -59,4 +57,12 @@ body.dark, body.dark h1 {
     font-size: 15px;
     vertical-align: middle;
     margin-left: 6px;
+}
+
+.input, .results {
+   display:none;
+}
+
+#mkurl {
+  margin: 10px 0;
 }

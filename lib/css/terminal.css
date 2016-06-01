@@ -18,7 +18,7 @@
     margin-left: 12px;
 }
 .top-nav {
-    background: #6F377D;
+    background: #53506b;
     height:15px;
 }
 
@@ -77,4 +77,36 @@ button.btn.btn-danger {
 .navbar.navbar-inverse.navbar-fixed-top {
     background-color: #282a36;
     background-image: none;
+}
+
+.error span.cm-variable {
+    color: red;
+}
+
+.error span.cm-string {
+    color: red;
+}
+
+.error span.cm-number {
+    color: red;
+}
+
+.error span.cm-operator {
+    color: red;
+}
+
+.error span.cm-property {
+    color: red;
+}
+
+.error span.cm-keyword {
+    color: red;
+}
+
+.navbar-brand {
+  color: #53506b;
+}
+
+.btn.btn-link.btn-xs.clear-console {
+    color: #939294;
 }
