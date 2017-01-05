@@ -12,10 +12,11 @@ This REPL includes different libraries such as
 - [Sanctuary](https://github.com/sanctuary-js/sanctuary) - available with prefix `S`
 - [Ramda Fantasy](https://github.com/ramda/ramda-fantasy) - available `Either, Future, Identity, IO, Maybe, Reader, Tuple `
 - [Tcomb](https://github.com/gcanti/tcomb) - available as `tcomb`
+- [Sanctuary-Type-Classes](https://github.com/sanctuary-js/sanctuary-type-classes) - available as `Z`
 
 ## Todo
-- [ ] Add examples
-- [ ] Add info for available libraries
+- [x] Add examples
+- [x] Add info for available libraries
 
 ### Please note
 If you are looking for the original REPL, it is now part of Ramda REPL [here](http://ramdajs.com/repl/)
